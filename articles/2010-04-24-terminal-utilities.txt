@@ -1,0 +1,155 @@
+--- 
+title: Terminal Utilities
+date: 24/04/2010
+author: Chris Brown
+tags: osx mac terminal tools
+
+I've been messing around with quite a lot of terminal programs recently so I
+thought the best thing to do would be to write a little bit about some of the
+programs, tools and utilities I've found.~
+
+Installing
+----------
+### Package Managers
+A package manager is your best friend here. Those of you who are using a [Linux
+distribution][1] have a head start here as these are already well established
+and full of packages on your platform. Mac OS X users have a few unofficial
+options for package managers:
+
+* [Macports][2] - Probably the most popular but it sometimes takes a while for
+  the newest packages to get put into the repositories.
+* [Fink][3] - I've never used it and people seem to claim that it's not as good
+  as *Macports*. That's all I've got about it.
+* [Brew][4] - The package manager I use. Packages are updated as fast as the
+  owner can pull people changes into the repository. Everything that I've
+  installed with it has worked flawlessly.
+
+If you are a Mac user you should probably choose one of these. You can also
+install stuff from source but if you're like me then you'd rather not do that
+unless you have to and there is a perfectly good package waiting for you to
+use. For the rest of this blog post I'll be using *Brew*.
+
+Installation instructions for *Brew* can be found [here][5]. I used the script
+that is provided at the top of the page and everything turned out fine. This is
+the recommended way to install *Brew* as everything will be in the default
+place and it will all be shiny.
+
+Now that you have what you need to get the most of your dependencies and
+programs we can move onto installing some of the more specialised installers.
+
+### Python
+*Python* is a pretty cool language but it does suffer from having some terrible
+package management. The 'official' package management program for *Python* is
+`easy_install` which is included in `setuptools`.
+
+Mac OS X already has `easy_install` included in the base install. Ubuntu users
+will have to run this command to install it:
+
+    sudo apt-get install python-setuptools python-dev build-essential
+
+Now, very much like Internet Explorer is only good for installing another
+browser `easy_install` is only good for installing `pip`. It provides much
+better feedback, native support for other version control systems (*Git*,
+*Mercurial* and *Bazaar*) when installing and it also allows for the
+uninstallation of packages. To install it (both OS X and Linux) tap this out on
+your keyboard and apply pressure to your return key:
+
+    sudo easy_install pip
+
+Now that's installed you're ready to install *Python* applications!
+
+### Ruby
+*Ruby* is a very, very cool language but it still has some issues with it's
+packaging like *Python*. Luckily there is one main solution for this and it's
+pretty good. *Rubygems* is the standard Ruby packaging system and it's pretty
+good at what it does. Mac OS X already has *Rubygems* installed but on Ubuntu
+you need to install it yourself but it's pretty painless just go:
+
+    sudo apt-get install rubygems
+
+Once you have that installed you're ready to install *Ruby* applications!
+
+[1]: http://ubuntu.com                                      "Ubuntu Linux"
+[2]: http://www.macports.org/                               "Macports"
+[3]: http://www.finkproject.org/                            "Fink"
+[4]: http://mxcl.github.com/homebrew/                       "Brew"
+[5]: http://wiki.github.com/mxcl/homebrew/installation      "Brew Installation"
+
+### Usage
+* Brew: `brew install <package name>`
+* Pip: `pip install <package name>`
+* Gem: `gem install <package name>`
+
+Useful Programs
+---------------
+### hub
+As you may know I'm a huge fan of the *Git* VCS and the corresponding site,
+[github.com][6]. `hub` connects the two and makes common operations much
+easier, simpler and more efficient. It does this by providing shortcuts with
+extensions to old commands and whole new ones. Definitely worth downloading if
+you use *Github*.
+
+* Homepage: <http://defunkt.github.com/hub/hub.1.html>
+* Install Command:
+    * Mac OS X: `brew install hub`
+    * Linux: <http://github.com/defunkt/hub/blob/master/README.md>
+
+### showoff
+*Showoff* is a tool for creating and presenting presentations. Slides are
+written in an extended form of [Markdown][7] and then rendered and served by
+*Showoff*. You can then view the finished presentation in a browser. *Showoff*
+is aimed at a more technical presentation style. These presentations can also
+be deployed to [Heroku][8]. An example presentation that I've been writing can
+be found [here][9]. Anyway, it's pretty cool: try it out.
+
+* Homepage: <http://github.com/schacon/showoff>
+* Install Command: `gem install showoff`
+
+### cheat
+*Cheat* provides access to a repository of community edited cheat-sheets that
+allow for up-to-date help and tips to a wide variety of tools. It's pretty
+useful and can be far more readable than man pages. [Here][10] is the example
+output of the `cheat git` command.
+
+* Homepage: <http://cheat.errtheblog.com/>
+* Install Command: `gem install cheat`
+
+### homesick
+*Homesick* is a tool for moving your dotfiles easily between two computers and
+also allowing for easy sharing of configuration files between different people.
+Installing a set of configuration files is as easy as:
+
+    homesick clone technicalpickles/pickled-vim
+    homesick symlink pickled-vim
+
+This will link the files into your home directory for immediate use. The only
+requirement is that you give it a git repository with your dotfiles in a set
+arrangement.
+
+* Homepage: <http://github.com/technicalpickles/homesick>
+* Install Command: `gem install homesick`
+
+### ack
+*Ack* is a tool like `grep` for programmers. It allows for the search of large
+quantities of source code. It adds some useful features over `grep` such as:
+
+* Really fast.
+* Ignores files that you don't want to search, such as:
+    * `.git` and `.svn` directories
+    * backup files, `name~` and `#name#`
+* Coloured output (shiny)
+* Specify what kind of files you want to search, `--no-perl` `--ruby`
+
+* Homepage: <http://betterthangrep.com/>
+* Example Output: <http://gist.github.com/377773>
+* Install Command: `brew install ack`
+
+Well, that's 5. I was planning on doing more but I think that's enough for now.
+I'll probably make another post with some more in at some point in the near
+future. Hope you try a new program today. :)
+
+[6]: http://github.com                              "Github"
+[7]: http://daringfireball.net/projects/markdown/   "Markdown"
+[8]: http://heroku.com                              "Heroku"
+[9]: http://at-tools.heroku.com                     "AT Tools Presentation"
+[10]: http://gist.github.com/377764                 "Git Cheatsheet Output"
