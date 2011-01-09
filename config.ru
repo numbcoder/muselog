@@ -1,6 +1,8 @@
 
 require 'toto'
 
+require 'extends'
+
 # Rack config
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
 use Rack::CommonLogger
@@ -8,6 +10,17 @@ use Rack::CommonLogger
 if ENV['RACK_ENV'] == 'development'
   use Rack::ShowExceptions
 end
+
+# Syntax Highlighting
+require 'coderay'
+require 'rack/codehighlighter'
+use Rack::Codehighlighter, :coderay, :markdown => true, 
+  :theme => "active4d", :lines => true, :element => "pre>code", 
+  :pattern => /\A:::(\w+)\s*(\n|&#x000A;)/, :logging => true
+
+
+
+
 
 #
 # Create and configure a toto instance

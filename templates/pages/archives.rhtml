@@ -1,16 +1,16 @@
 <h1><%= @path %></h1>
 <ul>
-  <% if archives.length > 0 %>
+  <% if archives.length > 0 %><h1><%=archives.class%></h1>
     <% for entry in archives %> 
       <li>
-        <a href="<%= entry.path %>"><%= entry.title %></a>
+        <a href="<%= entry.path %>"><%= entry.title %>_____<%=entry.class%></a>
       </li>
     <% end %>
   <% end %>
 </ul>
 <ul>
   <% if archives.length > 0 %>
-    <% for entry in archives %> 
+    <% for entry in archives %>
       <li>
         <a href="<%= entry.path %>"><%= entry.slug %></a>
       </li>

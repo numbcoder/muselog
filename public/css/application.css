@@ -1,0 +1,562 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, textarea, select, option, header, article, section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+  font-size: 100%;
+	background: transparent;
+  text-align: left;
+  vertical-align: baseline;
+}
+header, article, section{display:block}
+body {
+  font-size: 12px;
+  font-family: sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+  width: 100%;
+}
+code {
+  font-family: monospace;
+}
+img, video {
+  max-width: 100%;
+}
+input[type="button"], input[type="submit"], button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #CC0000;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-size: 274%;
+}
+h2 {
+  font-size: 224%;
+}
+h3 {
+  font-size: 184%;
+}
+h4 {
+  font-size: 124%;
+}
+input, textarea, select, button {
+  border: 1px solid #CCCCCC;
+  padding: 3px;
+}
+select {
+  padding: 1px;
+}
+select option {
+  padding: 1px 3px;
+  background: #FFFFFF;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  border: 1px solid #669900;
+  outline: 1px solid #669900;
+}
+
+
+pre.twilight .DiffInserted {
+   background-color: #253B22;
+   color: #F8F8F8;
+}
+pre.twilight .DiffHeader {
+   background-color: #0E2231;
+   color: #F8F8F8;
+   font-style: italic;
+}
+pre.twilight .CssPropertyValue {
+   color: #F9EE98;
+}
+pre.twilight .CCCPreprocessorDirective {
+   color: #AFC4DB;
+}
+pre.twilight .Constant {
+   color: #CF6A4C;
+}
+pre.twilight .DiffChanged {
+   background-color: #4A410D;
+   color: #F8F8F8;
+}
+pre.twilight .EmbeddedSource {
+   background-color: #A3A6AD;
+}
+pre.twilight .Support {
+   color: #9B859D;
+}
+pre.twilight .MarkupList {
+   color: #F9EE98;
+}
+pre.twilight .CssConstructorArgument {
+   color: #8F9D6A;
+}
+pre.twilight .Storage {
+   color: #F9EE98;
+}
+pre.twilight .line-numbers {
+   background-color: #DDF0FF;
+   color: #000000;
+}
+pre.twilight .CssClass {
+   color: #9B703F;
+}
+pre.twilight .StringConstant {
+   color: #DDF2A4;
+}
+pre.twilight .CssAtRule {
+   color: #8693A5;
+}
+pre.twilight .MetaTagInline {
+   color: #E0C589;
+}
+pre.twilight .MarkupHeading {
+   color: #CF6A4C;
+}
+pre.twilight .CssTagName {
+   color: #CDA869;
+}
+pre.twilight .SupportConstant {
+   color: #CF6A4C;
+}
+pre.twilight .DiffDeleted {
+   background-color: #420E09;
+   color: #F8F8F8;
+}
+pre.twilight .CCCPreprocessorLine {
+   color: #8996A8;
+}
+pre.twilight .StringRegexpSpecial {
+   color: #CF7D34;
+}
+pre.twilight .EmbeddedSourceBright {
+   background-color: #9C9EA4;
+}
+pre.twilight .InvalidIllegal {
+   background-color: #241A24;
+   color: #F8F8F8;
+}
+pre.twilight .SupportFunction {
+   color: #DAD085;
+}
+pre.twilight .CssAdditionalConstants {
+   color: #CA7840;
+}
+pre.twilight .MetaTagAll {
+   color: #AC885B;
+}
+pre.twilight .StringRegexp {
+   color: #E9C062;
+}
+pre.twilight .StringEmbeddedSource {
+   color: #DAEFA3;
+}
+pre.twilight .EntityInheritedClass {
+   color: #9B5C2E;
+   font-style: italic;
+}
+pre.twilight .CssId {
+   color: #8B98AB;
+}
+pre.twilight .CssPseudoClass {
+   color: #8F9D6A;
+}
+pre.twilight .StringVariable {
+   color: #8A9A95;
+}
+pre.twilight .String {
+   color: #8F9D6A;
+}
+pre.twilight .Keyword {
+   color: #CDA869;
+}
+pre.twilight {
+   background-color: #141414;
+   color: #F8F8F8;
+}
+pre.twilight .CssPropertyName {
+   color: #C5AF75;
+}
+pre.twilight .DoctypeXmlProcessing {
+   color: #494949;
+}
+pre.twilight .InvalidDeprecated {
+   color: #D2A8A1;
+   font-style: italic;
+}
+pre.twilight .Variable {
+   color: #7587A6;
+}
+pre.twilight .Entity {
+   color: #9B703F;
+}
+pre.twilight .Comment {
+   color: #5F5A60;
+   font-style: italic;
+}
+
+
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ *
+ * Version: 1.3.1 (05/03/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: 40px;
+	width: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+}
+
+* html #fancybox-loading {	/* IE6 */
+	position: absolute;
+	margin-top: 0;
+}
+
+#fancybox-loading div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+}
+
+#fancybox-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	z-index: 1100;
+	display: none;
+}
+
+* html #fancybox-overlay {	/* IE6 */
+	position: absolute;
+	width: 100%;
+}
+
+#fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 20px;
+	z-index: 1101;
+	display: none;
+}
+
+#fancybox-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+}
+
+#fancybox-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	overflow: hidden;
+}
+
+#fancybox-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+#fancybox-close {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 30px;
+	height: 30px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px 0px;
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+
+#fancybox_error {
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 7px;
+	margin: 0;
+}
+
+#fancybox-content {
+	height: auto;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+
+#fancybox-img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+	-ms-interpolation-mode: bicubic;
+}
+
+#fancybox-frame {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#fancybox-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-family: Arial;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.fancybox-title-inside {
+	padding: 10px 0;
+	text-align: center;
+	color: #333;
+}
+
+.fancybox-title-outside {
+	padding-top: 5px;
+	color: #FFF;
+	text-align: center;
+	font-weight: bold;
+}
+
+.fancybox-title-over {
+	color: #FFF;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	padding: 10px;
+	background-image: url('/javascripts/fancybox/fancy_title_over.png');
+	display: block;
+}
+
+#fancybox-title-wrap {
+	display: inline-block;
+}
+
+#fancybox-title-wrap span {
+	height: 32px;
+	float: left;
+}
+
+#fancybox-title-left {
+	padding-left: 15px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -90px;
+	background-repeat: no-repeat;
+}
+
+#fancybox-title-main {
+	font-weight: bold;
+	line-height: 29px;
+	background-image: url('/javascripts/fancybox/fancybox-x.png');
+	background-position: 0px -40px;
+	color: #FFF;
+}
+
+#fancybox-title-right {
+	padding-left: 15px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -55px -90px;
+	background-repeat: no-repeat;
+}
+
+#fancybox-left, #fancybox-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background-image: url('/javascripts/fancybox/blank.gif');
+	z-index: 1102;
+	display: none;
+}
+
+#fancybox-left {
+	left: 0px;
+}
+
+#fancybox-right {
+	right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+}
+
+#fancybox-left-ico {
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+	visibility: visible;    /* IE6 */
+}
+
+#fancybox-left:hover span {
+	left: 20px;
+}
+
+#fancybox-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.fancy-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#fancy-bg-n {
+	top: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('/javascripts/fancybox/fancybox-x.png');
+}
+
+#fancy-bg-ne {
+	top: -20px;
+	right: -20px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -162px;
+}
+
+#fancy-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	background-image: url('/javascripts/fancybox/fancybox-y.png');
+	background-position: -20px 0px;
+}
+
+#fancy-bg-se {
+	bottom: -20px;
+	right: -20px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -182px; 
+}
+
+#fancy-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('/javascripts/fancybox/fancybox-x.png');
+	background-position: 0px -20px;
+}
+
+#fancy-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -142px;
+}
+
+#fancy-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	background-image: url('/javascripts/fancybox/fancybox-y.png');
+}
+
+#fancy-bg-nw {
+	top: -20px;
+	left: -20px;
+	background-image: url('/javascripts/fancybox/fancybox.png');
+	background-position: -40px -122px;
+}

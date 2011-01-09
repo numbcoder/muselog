@@ -29,6 +29,13 @@ desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
   `git push heroku master`
+  `git push origin master`
+end
+
+desc "Publish the blog locally."
+task :local do
+    toto "deploying locally..."
+    `thin start -R config.ru`
 end
 
 def toto msg

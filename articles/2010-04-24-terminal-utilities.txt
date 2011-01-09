@@ -3,6 +3,10 @@ title: Terminal Utilities
 date: 24/04/2010
 author: Chris Brown
 tags: osx mac terminal tools
+category: 系统
+
+
+最开始想到的自然是用着最顺手的Archlinux，Google过后发现由于内核的bug导致无法识别SATA设备，只好放弃了，虽然也有各种解决办法。然后考虑大家推荐的Gentoo，看了下文档，觉得实在足够麻烦，而自己总是觉得很忙，也就没有尝试。
 
 I've been messing around with quite a lot of terminal programs recently so I
 thought the best thing to do would be to write a little bit about some of the

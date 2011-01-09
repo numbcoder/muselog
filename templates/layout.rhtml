@@ -1,18 +1,37 @@
 <!doctype html>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" href="/css/application.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
     <title><%= title %></title>
   </head>
   <body>
-    <section>
-      <%= yield %> 
-    </section>
-    <footer>
-      powered by <a href="http://cloudhead.io/toto">toto</a>
-    </footer>
+    <div id="container">
+
+      <div id="header">
+        <ul>
+          <li><a href="/" class="nav">Blog</a></li>
+          <li><a href="/about" class="page_link">About</a></li>
+        </ul>
+        <h1><a href="/">Code & Poem</a></h1>
+      </div>
+
+
+      <div id="main" class="clearfix">
+        <%= yield %>
+      </div>
+
+      <div id="footer" class="clearfix">
+        &copy; <a href="https://twitter.com/numbcoder">Johnny Wong</a> | Powered By TOTO on Heroku |
+        <a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a>
+        <a href="#container" class="to_top">TOP</a>
+      </div>
+
+    </div>
   </body>
 </html>
 
