@@ -1,10 +1,10 @@
-title: hello blog
+title: 的发送的个
+slug: hello-blog
 author: Lyman
 date: 2012/05/17
 tags: ones hel
 category: 测试用的
 
------
 ## this is h1
    * ddd
 ###this is h3
@@ -13,8 +13,6 @@ category: 测试用的
     
   * andd
   * ddd
-    * rrdddd
-    * ggdew
 
 啊对方的 我很大的不会 地方地方地方 的地方
 Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, 

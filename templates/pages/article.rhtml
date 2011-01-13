@@ -2,8 +2,7 @@
   <header class="post_header">
     <h3 class="post_title"><a href="<%= article.path %>"><%= article.title %></a></h3>
     <div class="post_info info">
-    	Author: <a href="#"><%=article.author%></a> | 
-    	Posted At: <%= article.date %>
+    	Posted at：<span class="post_at"><%= Date.parse(article.date).strftime("%Y-%m-%d")%></span>  |  Tags：<% article.tags.each do |tag|%><a href="/tag/<%=tag%>" class="tag"><%=tag%></a>&nbsp;<%end%>
     </div>
   </header>
 

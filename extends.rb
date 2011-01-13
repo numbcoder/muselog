@@ -35,7 +35,15 @@ module Toto
     end
     
     def tag (name, type = :html)
-    	return :tags => Tags.new(["we","gggg", name], @config)
+    	entries = ! self.articles.empty??
+        self.articles.select do |a|
+          Article.new(a, @config).tags.include?(name)
+        end.reverse.map do |article|
+          Article.new article, @config
+        end : []
+
+      return :archives => Archives.new(entries, @config)
+    	#return :tags => Tags.new(["we","gggg", name], @config)
     end
     
     def go route, env = {}, type = :html

@@ -1,20 +1,19 @@
-<h1><%= @path %></h1>
-<ul>
-  <% if archives.length > 0 %><h1><%=archives.class%></h1>
-    <% for entry in archives %> 
-      <li>
-        <a href="<%= entry.path %>"><%= entry.title %>_____<%=entry.class%></a>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
-<ul>
-  <% if archives.length > 0 %>
+
+<div id="about" class="block post">
+  <div class="block_header post_header">
+    <h3 class="block_title post_title"><a href="/archives">Archives</a></h3>
+  </div>
+  <div class="block_body body">
+    <ul>
+      <% if archives.length > 0 %>
     <% for entry in archives %>
       <li>
-        <a href="<%= entry.path %>"><%= entry.slug %></a>
+        <a href="<%= entry.path %>"><%= entry.title %></a>(<%=Date.parse(entry.date).strftime("%Y/%m/%d")%>)
       </li>
     <% end %>
   <% end %>
-</ul>
+    </ul>
+  </div>
+</div>
+
 

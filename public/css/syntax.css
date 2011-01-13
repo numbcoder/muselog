@@ -1,13 +1,13 @@
 .CodeRay {
-  background-color: #f8f8f8;
-  border: 1px solid silver;
-  font-family: 'Monaco', 'Courier New', 'Terminal', monospace;
-  color: #000;
+  background-color: #000;
+  border: 1px dashed silver;
+  font-family: 'Monaco', 'Monospace','Courier New', 'Terminal';
+  color: #f8f8f8;
   line-height: 20px;
-  padding:0px;
+  padding:4px;
 }
-.CodeRay pre { margin: 0px }
-pre.CodeRay { margin: 0px }
+.CodeRay pre { margin: 4px }
+pre.CodeRay { margin: 4px }
 
 div.CodeRay { }
 

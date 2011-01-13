@@ -1,13 +1,11 @@
 <section id="articles">
-  <% for article in articles[0...3] %>
+  <% for article in articles[0...5] %>
     <article class="post  clearfix">
-      <header class="post_header">
+      <header class="post_header" >
         <h3 class="post_title"><a href="<%= article.path %>"><%= article.title %></a></h3>
         <div class="post_info info">
-        	Author: <a href="#"><%=article.author%></a> | 
-        	Posted At: <%= article.date %>
-        	Tags: <% article.tags.each do |tag|%><a href="#"><%=tag%></a><%end%>
-        	分类：<%= article.category%>
+        	<b>Posted at：</b><span class="post_at"><%= Date.parse(article.date).strftime("%Y-%m-%d") %></span> | 
+        	<b>Tags：</b><% article.tags.each do |tag|%><a class="tag" href="tag/<%=tag%>"><%=tag%></a>&nbsp;<%end%>
         </div>
       </header>
 
@@ -19,5 +17,6 @@
   <% end %>
 </section>
 
-
-
+<%["rgba(54, 2, 90, 0.93)","rgba(58, 113, 13, 0.93)","rgba(9, 59, 24, 0.93)","rgba(5, 38, 4, 0.93)","rgba(2, 11, 54, 0.93)","rgba(71, 75, 27, 0.93)"]%>
+<%["rgba(12, 95, 1, 0.93)","rgba(42, 67, 12, 0.93)","rgba(38, 46, 3, 0.93)","rgba(1, 15, 55, 0.93)","rgba(7, 15, 29, 0.93)","rgba(1, 28, 48, 0.93)"]%>
+<%["rgba(11, 5, 10, 0.93)","rgba(33, 1, 48, 0.93)"]%>

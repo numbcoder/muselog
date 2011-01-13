@@ -1,5 +1,18 @@
-<h1><%= @path %></h1>
-<%tags.each do |tag|%>
-<a href="#"><%=tag%></a><br/>
-<%end%>
+<div id="about" class="block post">
+  <div class="block_header post_header">
+    <h3 class="block_title post_title"><a href=""><%=":tag => #{@path.split("/").last}"%></a></h3>
+  </div>
+  <div class="block_body body">
+    <ul>
+      <% if archives.length > 0 %>
+    <% for entry in archives %>
+      <li>
+        <a href="<%= entry.path %>"><%= entry.title %></a>(<%=Date.parse(entry.date).strftime("%Y/%m/%d")%>)
+      </li>
+    <% end %>
+  <% end %>
+    </ul>
+  </div>
+</div>
+
 
