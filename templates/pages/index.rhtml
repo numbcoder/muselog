@@ -4,8 +4,8 @@
       <header class="post_header" >
         <h3 class="post_title"><a href="<%= article.path %>"><%= article.title %></a></h3>
         <div class="post_info info">
-        	<b>Posted at：</b><span class="post_at"><%= Date.parse(article.date).strftime("%Y-%m-%d") %></span> | 
-        	<b>Tags：</b><% article.tags.each do |tag|%><a class="tag" href="tag/<%=tag%>"><%=tag%></a>&nbsp;<%end%>
+        	发表于：<span class="post_at"><%= Date.parse(article.date).strftime("%Y-%m-%d") %></span> | 
+        	标签：<% article.tags.each do |tag|%><a class="tag" href="tag/<%=tag%>"><%=tag%></a>&nbsp;<%end%>
         </div>
       </header>
 

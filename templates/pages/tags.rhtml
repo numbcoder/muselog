@@ -1,5 +1,18 @@
-<h1><%= @path %></h1>
-<%tags.each do |tag|%>
-<a href="#"><%=tag%></a><br/>
-<%end%>
+<div id="about" class="block post">
+  <div class="block_header post_header">
+    <h3 class="block_title post_title"><a href="/tags">Tags Cloud</a></h3>
+  </div>
+  <div class="block_body body">
+    <ul class="tag_cloud">
+      <% if tags.length > 0 %>
+    <% tags.each do |tag| %>
+      <li class="tag">
+        <a href="/tag/<%=tag%>"><%= tag %></a>
+      </li>
+    <% end %>
+  <% end %>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</div>
 
