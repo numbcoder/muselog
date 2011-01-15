@@ -1,10 +1,11 @@
 .CodeRay {
-  background-color: #000;
+  background-color: #f8f8f8;
   border: 1px dashed silver;
   font-family: 'Monaco', 'Monospace','Courier New', 'Terminal';
-  color: #f8f8f8;
+  color: #000000;
   line-height: 20px;
   padding:4px;
+  font-size:13px;
 }
 .CodeRay pre { margin: 4px }
 pre.CodeRay { margin: 4px }

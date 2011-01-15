@@ -1,0 +1,10 @@
+--- 
+title: Git Configuration
+date: 14/11/2010
+tags: git, config
+
+So I was improving my git configuration and then I thought that some
+people (me) might find it useful (have to retrieve it in a hurry at some
+point). So I decided to post it here:
+
+<script src="https://gist.github.com/675799.js?file=.gitconfig"></script>

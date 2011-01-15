@@ -1,27 +1,35 @@
-title: 的发送的个
+title: 博客测试
 slug: hello-blog
 author: Lyman
 date: 2012/05/17
-tags: ones hel
+tags: toto blog
 category: 测试用的
 
-## this is h1
-   * ddd
-###this is h3
+## Title test
 
     unless File.exist? path
     
-  * andd
-  * ddd
 
-啊对方的 我很大的不会 地方地方地方 的地方
 Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, 
 who was a farmer, and Aunt Em, who was the farmer's wife.
 
+    :::ruby
     def all 
       puts "sans" 
     end
 
 Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, 
+code test
+
+    :::ruby
+    class Article < Hash
+		include Template
+		def tags 
+		  self[:tags].to_s.strip.empty? ? ["far"] : self[:tags].split(" ")
+		end
+		def category
+		  self[:category] || "category01"
+		end
+	end
 Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, 
 
