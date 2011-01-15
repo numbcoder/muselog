@@ -4,6 +4,7 @@
       <header class="post_header" >
         <h3 class="post_title"><a href="<%= article.path %>"><%= article.title %></a></h3>
         <div class="post_info info">
+          作者：<span class="post_at"><%= article.author %></span> | 
         	发表于：<span class="post_at"><%= Date.parse(article.date).strftime("%Y-%m-%d") %></span> | 
         	标签：<% article.tags.each do |tag|%><a class="tag" href="tag/<%=tag%>"><%=tag%></a>&nbsp;<%end%>
         </div>

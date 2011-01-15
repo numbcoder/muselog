@@ -2,10 +2,10 @@ module Toto
 	class Article < Hash
 		include Template
 		def tags 
-			self[:tags].to_s.strip.empty? ? ["other"] : self[:tags].split(" ")
+			self[:tags].to_s.strip.empty? ? ["others"] : self[:tags].split(" ")
 		end
 		def category
-		  self[:category] || "other"
+		  self[:category] || "others"
 		end
 	end
 	
