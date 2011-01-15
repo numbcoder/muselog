@@ -1,7 +1,7 @@
 --- 
 title: Git Configuration
 date: 14/11/2010
-tags: git, config
+tags: git config
 
 So I was improving my git configuration and then I thought that some
 people (me) might find it useful (have to retrieve it in a hurry at some
